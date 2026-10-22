@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://steps/step_03_head_bob/feel.gd" id="1_feel"]
+
+[resource]
+script = ExtResource("1_feel")
+stride = 1.7
+first_step = 0.5
+bob_height = 0.025
+bob_smoothing = 8.0
