@@ -3,7 +3,7 @@ extends SceneTree
 ## player walks, the chain is asked for its plans and the plans are read. A generator needs a check,
 ## not hope: one lucky seed proves nothing, a thousand seeds with a rule list prove a lot.
 ##
-##   godot --headless --path godot/10-sound-and-camera-feel -s res://steps/step_05_comfort_settings/check_solvable.gd
+##   godot --headless --path godot/09-sound-and-camera-feel -s res://steps/step_05_comfort_settings/check_solvable.gd
 ##
 ## Option: `-- --seeds=200` checks seeds 1 to 200 only. The exit code is 0 if every seed passes and
 ## 1 if any fails, so a build server can run it.

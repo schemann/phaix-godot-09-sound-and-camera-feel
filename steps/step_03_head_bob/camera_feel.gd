@@ -1,15 +1,13 @@
 extends Camera3D
 ## What the camera adds to the walk, for the eye only: the view dips a little at every step (head bob).
-## It moves this camera inside the head and nothing else. The player's body, its collider and its head (the yaw and the
-## pitch that steer the walk) never see it, so the effect cannot change where the player goes.
-## The bob follows the footsteps: the view is lowest when a foot comes down and highest halfway to the next step.
+## It moves this camera and nothing else. The body, its collider and the head that steers never see it.
 
 const Feel := preload("feel.gd")
 const Footsteps := preload("footsteps.gd")
 const FEEL: Feel = preload("feel.tres")
 
 @export var footsteps: Footsteps ## Where the step cycle comes from.
-@export var head_bob := true ## Off: the camera stays exactly where the head is. Head bob makes some players sick, so it can be turned off.
+@export var head_bob := true ## Off: the camera stays exactly where the head is.
 
 var _bob := 0.0 ## 0 standing, 1 walking, eased in between so the bob fades in and out.
 

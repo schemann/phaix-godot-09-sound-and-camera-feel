@@ -1,8 +1,11 @@
 # Sound and Camera Feel in Godot 4
 
-Project files for tutorial 10 of the Godot 4 series by Phaix on YouTube (https://www.youtube.com/@Phaix).
+Project files for tutorial 09 of the Godot 4 series by Phaix on YouTube (https://www.youtube.com/@Phaix).
 
-Give a silent run a sound and a feel in Godot 4.7, with every effect small, measured and switchable. Nine sounds written by one script from noise, a filter and an envelope, and played on their own buses (Master, SFX, Ambience). Door sounds that play where the door is, with an AudioStreamPlayer3D, and a chime and a room tone that play in the player's ears. Footsteps that follow the distance walked instead of a timer, with an AudioStreamRandomizer so that no two steps sound the same. A head bob tied to the step cycle that moves the camera down and up only. A field of view kick of two degrees that stays inside the 110 degrees a computer game usually allows. A settings box with volume sliders and two switches that saves its file. Every number comes from a headless test or from the recorded shots, and the sound of the game is in the video, mixed under the narration. Every step is its own project folder.
+Give the generated rooms of a game like Roblox DOORS a sound and a feel in Godot 4.
+We add door sounds on audio buses, footsteps that follow the distance you walk, a head bob, a field of view kick when a door opens and comfort settings the player can change and save.
+
+The sounds are CC0 recordings from the RPG Audio pack by Kenney: every move of a door gets an AudioStreamPlayer3D on the SFX bus and the key's pick-up sound belongs to the player. A footstep comes every stride along the floor, not from a timer, through an AudioStreamRandomizer. The head bob dips the camera only, with an exponential fade, and the kick is a tween on the field of view. Both effects have an off switch, and the settings box saves them as JSON. Every step is its own project folder.
 
 ![Screenshot](screenshot.png)
 
@@ -14,8 +17,8 @@ that step. The project's main scene is the final step.
 
 | Folder | Part of the video |
 |---|---|
-| `steps/step_00_start` | Starting point (the final state of the previous tutorial) |
-| `steps/step_01_door_sounds` | Step 1 - Sounds on buses |
+| `steps/step_00_start` | Starting point (the final state of tutorial 08) |
+| `steps/step_01_door_sounds` | Step 1 - Door sounds on buses |
 | `steps/step_02_footsteps` | Step 2 - Footsteps by distance |
 | `steps/step_03_head_bob` | Step 3 - Head bob |
 | `steps/step_04_fov_kick` | Step 4 - A field of view kick |
@@ -33,6 +36,12 @@ in the video and in the HUD.
 godot --headless --path . -s res://tests/run_tests.gd
 ```
 
+## Support
+
+Support the channel: https://ko-fi.com/phaix or https://github.com/sponsors/schemann
+
 ## License
 
 Code and scenes: MIT (see LICENSE).
+The figure and its animations: Animated Characters Protagonists by Kenney (www.kenney.nl), CC0, see character/License.txt.
+The sounds (footsteps, doors, lock, key): RPG Audio by Kenney (www.kenney.nl, https://kenney.nl/assets/rpg-audio), CC0, see sounds/CREDITS.md.
